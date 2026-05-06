@@ -1,23 +1,23 @@
 @extends('layouts.projects')
 
-@section('title', "Tutti i post")
+@section('title', "All Projects")
 
 @section('content')
 
-    <table>
-        <thead>
+    <table class="table table-striped table-hover align-middle">
+        <thead class="table-dark">
             <tr>
-                <th>Titolo</th>
-                <th>Autore</th>
-                <th>Contenuto</th>
+                <th>Title</th>
+                <th>Author</th>
             </tr>
         </thead>
         <tbody>
+
+
             @foreach ($projects as $project)
                 <tr>
-                    <td>{{ $project->title}}</td>
-                    <td>{{ $project->author}}</td>
-                    <td>{{$project->content}}</td>
+                    <td class="fw-semibold">{{ $project->title }}</td>
+                    <td>{{ $project->author }}</td>
                 </tr>
             @endforeach
         </tbody>

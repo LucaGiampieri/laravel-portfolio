@@ -1,22 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Project</title>
+    <title>@yield('title')</title>
+
+    @vite(['resources/scss/app.scss', 'resources/js/app.js'])
 </head>
 
-<body>
+<body class="bg-light">
 
-    <div class="container">
-        <h1>
-            @yield('title')
-        </h1>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Projects</a>
+        </div>
+    </nav>
 
-        @yield('content')
-    </div>
+    <main class="py-4">
+        <div class="container">
+
+            <h1 class="mb-4 fw-bold">
+                @yield('title')
+            </h1>
+
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    @yield('content')
+                </div>
+            </div>
+
+        </div>
+    </main>
 
 </body>
 
