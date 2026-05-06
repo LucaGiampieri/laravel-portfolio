@@ -16,7 +16,11 @@
 
             @foreach ($projects as $project)
                 <tr>
-                    <td class="fw-semibold">{{ $project->title }}</td>
+                    <td>
+                        <a href="{{ route('projects.show', $project) }}" class="fw-semibold text-dark text-decoration-none">
+                            {{ $project->title }}
+                        </a>
+                    </td>
                     <td>{{ $project->author }}</td>
                 </tr>
             @endforeach
