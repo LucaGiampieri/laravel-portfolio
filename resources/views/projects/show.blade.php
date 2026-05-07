@@ -19,12 +19,10 @@
                 Author: {{ $project->author }}
             </h6>
 
-            <!-- Contenuto -->
             <p class="card-text fs-5">
                 {{ $project->content }}
             </p>
 
-            <!-- Bottone torna indietro -->
             <a href="{{ route('projects.index') }}" class="btn btn-secondary mt-3">
                 ← Back to projects
             </a>

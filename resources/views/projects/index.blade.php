@@ -9,6 +9,7 @@
             <tr>
                 <th>Title</th>
                 <th>Author</th>
+                <th>Category</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +23,7 @@
                         </a>
                     </td>
                     <td>{{ $project->author }}</td>
+                    <td>{{ $project->category }}</td>
                 </tr>
             @endforeach
         </tbody>
