@@ -12,7 +12,7 @@
             </h2>
 
             <div class="mb-3">
-                {{ $project->type->name}}
+                {{ $project->type ? $project->type->name : 'Nessun tipo' }}
             </div>
 
             <h6 class="text-muted mb-4">

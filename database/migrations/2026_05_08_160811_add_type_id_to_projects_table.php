@@ -15,8 +15,9 @@ return new class () extends Migration {
             $table->dropColumn('type');
 
             $table->foreignId('type_id')
-            ->nullable()
-            ->constrained();
+                ->nullable()
+                ->constrained()
+                ->nullOnDelete();
 
         });
     }
