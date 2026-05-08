@@ -12,7 +12,7 @@
             </h2>
 
             <div class="mb-3">
-                {{ $project->category }}
+                {{ $project->type->name}}
             </div>
 
             <h6 class="text-muted mb-4">

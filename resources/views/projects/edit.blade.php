@@ -19,8 +19,13 @@
         </div>
 
         <div class="form-control mb-3 d-flex flex-column">
-            <label for="category">Category</label>
-            <input type="text" name="category" id="category" value="{{ $project->category}}">
+            <label for="type_id">Type</label>
+            <select type="text" name="type_id" id="type_id">
+                @foreach ($types as $type)
+                    <option value="{{ $type->id }}" {{ $project->type_id == $type->id ? "selected" : "" }}>{{ $type->name }}
+                    </option>
+                @endforeach
+            </select>
         </div>
 
         <div class="form-control mb-3 d-flex flex-column">
