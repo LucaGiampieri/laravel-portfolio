@@ -20,70 +20,70 @@ class ProjectsTableSeeder extends Seeder
                   'title' => 'Portfolio Laravel',
                   'author' => 'Mario Rossi',
                   'content' => 'Sviluppo di un portfolio personale con Laravel, Breeze e Bootstrap.',
-                  'category' => 'Backend',
+                  'type_id' => rand(1, 5),
               ],
 
               [
                   'title' => 'Clone Netflix',
                   'author' => 'Luca Bianchi',
                   'content' => 'Replica della homepage di Netflix usando HTML, CSS e JavaScript.',
-                  'category' => 'Frontend',
+                  'type_id' => rand(1, 5),
               ],
 
               [
                   'title' => 'Todo App',
                   'author' => 'Giulia Verdi',
                   'content' => 'Applicazione per gestione attività con CRUD completo.',
-                  'category' => 'Web App',
+                  'type_id' => rand(1, 5),
               ],
 
               [
                   'title' => 'Weather App',
                   'author' => 'Marco Neri',
                   'content' => 'App meteo che utilizza API esterne per previsioni in tempo reale.',
-                  'category' => 'API',
+                  'type_id' => rand(1, 5),
               ],
 
               [
                   'title' => 'E-commerce UI',
                   'author' => 'Sara Conti',
                   'content' => 'Interfaccia frontend di un e-commerce con carrello dinamico.',
-                  'category' => 'Frontend',
+                  'type_id' => rand(1, 5),
               ],
 
               [
                   'title' => 'Admin Dashboard',
                   'author' => 'Andrea Galli',
                   'content' => 'Pannello admin con gestione completa dei dati.',
-                  'category' => 'Backend',
+                  'type_id' => rand(1, 5),
               ],
 
               [
                   'title' => 'Memory Game',
                   'author' => 'Francesca Riva',
                   'content' => 'Gioco memory sviluppato in JavaScript con punteggio e timer.',
-                  'category' => 'Game',
+                  'type_id' => rand(1, 5),
               ],
 
               [
                   'title' => 'Blog PHP',
                   'author' => 'Davide Fontana',
                   'content' => 'Sistema blog con autenticazione utenti e CRUD articoli.',
-                  'category' => 'CMS',
+                  'type_id' => rand(1, 5),
               ],
 
               [
                   'title' => 'Real Time Chat',
                   'author' => 'Elena Greco',
                   'content' => 'Chat in tempo reale con WebSocket.',
-                  'category' => 'Realtime',
+                  'type_id' => rand(1, 5),
               ],
 
               [
                   'title' => 'Film Manager',
                   'author' => 'Paolo Ferri',
                   'content' => 'App per gestione e ricerca film preferiti.',
-                  'category' => 'Database',
+                  'type_id' => rand(1, 5),
               ],
 
           ];

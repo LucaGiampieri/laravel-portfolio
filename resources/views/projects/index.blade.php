@@ -10,7 +10,7 @@
             <tr>
                 <th>Title</th>
                 <th>Author</th>
-                <th>Category</th>
+                <th>Type</th>
                 <th>Option</th>
             </tr>
         </thead>
@@ -25,7 +25,7 @@
 
                     <td>{{ $project->author }}</td>
 
-                    <td>{{ $project->category }}</td>
+                    <td>{{ $project->type->name }}</td>
 
                     <td>
 
