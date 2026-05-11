@@ -22,7 +22,7 @@ class TechnologyController extends Controller
      */
     public function create()
     {
-        //
+        return view("technologies.create");
     }
 
     /**
@@ -30,15 +30,23 @@ class TechnologyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $newTechnology = new Technology();
+        $newTechnology->name = $data["name"];
+        $newTechnology->color = $data["color"];
+
+        $newTechnology->save();
+
+        return redirect()->route("technologies.show", $newTechnology);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Technology $technology)
     {
-        //
+        return view("technologies.show", compact("technology"));
     }
 
     /**
@@ -60,8 +68,12 @@ class TechnologyController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Technology $technology)
     {
-        //
+        $technology->projects()->detach();
+
+        $technology->delete();
+
+        return redirect()->route('technologies.index');
     }
 }

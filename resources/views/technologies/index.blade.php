@@ -22,7 +22,8 @@
 
                     <td>{{ $technology->name }}</td>
 
-                    <td> <span class="badge" style="background-color: {{ $technology->color }}">{{ $technology->name }}</span>
+                    <td>
+                        <span class="badge" style="background-color: {{ $technology->color }}">{{ $technology->name }}</span>
                     </td>
 
                     <td>
@@ -83,7 +84,7 @@
                             Delete the technology
                         </h1>
 
-                        <button technology="button" class="btn-close" data-bs-dismiss="modal">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal">
                         </button>
 
                     </div>
@@ -97,8 +98,7 @@
 
                     <div class="modal-footer">
 
-                        <button technology="button" class="btn btn-secondary" data-bs-dismiss="modal">
-
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                             Cancel
                         </button>
 
@@ -107,7 +107,7 @@
                             @csrf
                             @method('DELETE')
 
-                            <input technology="submit" class="btn btn-outline-danger" value="PERMANENTLY DELETE">
+                            <input type="submit" class="btn btn-outline-danger" value="PERMANENTLY DELETE">
 
                         </form>
 
