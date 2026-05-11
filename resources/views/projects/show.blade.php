@@ -19,6 +19,15 @@
                 Author: {{ $project->author }}
             </h6>
 
+            @if (count($project->technologies) > 0)
+                <small>
+                    Technology:
+                    @foreach ($project->technologies as $technology)
+                        <span class="badge" style="background-color: {{ $technology->color }}">{{ $technology->name }}</span>
+                    @endforeach
+                </small>
+            @endif
+
             <p class="card-text fs-5">
                 {{ $project->content }}
             </p>
