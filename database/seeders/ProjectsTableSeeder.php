@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Project;
+use App\Models\Technology;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
@@ -90,7 +91,14 @@ class ProjectsTableSeeder extends Seeder
 
         foreach ($projects as $project) {
 
-            Project::create($project);
+            $newProject = Project::create($project);
+
+            $techIds = Technology::inRandomOrder()
+                ->take(rand(1, 3))
+                ->pluck('id')
+                ->toArray();
+
+            $newProject->technologies()->sync($techIds);
         }
 
     }
