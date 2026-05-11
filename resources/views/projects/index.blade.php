@@ -65,6 +65,11 @@
             Go to Types
         </a>
 
+        <a class="btn btn-success" href="{{ route('technologies.index') }}">
+
+            Go to Technologies
+        </a>
+
     </div>
 
 
